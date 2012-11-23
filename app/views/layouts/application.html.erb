@@ -8,17 +8,13 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+<%= render 'layouts/header' %>
 <div class="container-fluid">
-	<div class="navbar navbar-inverse navbar-fixed-top">
-		<div class="navbar-inner">
-			<div class="container-fluid">
-				<a class="brand logo" href="">Movie Marathon Helper</a>
-			</div>
-		</div>
-	</div>
 	<div class="center hero-unit">
 		<%= yield %>
 	</div>
+
+	<%= render 'layouts/footer' %>
 </div>
 </body>
 </html>

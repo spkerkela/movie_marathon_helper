@@ -1,13 +1,21 @@
 @import "bootstrap";
 
+$darkGray: #312E3D;
+$lightYellow: #E2DEB9;
+$strongYellow: #DDD66F;
+$strongRed: #9E4B46;
 body {
 	padding-top: 60px;
-	background-color: #312E3D;
+	background-color: $darkGray;
 }
 
-p {
-	color: #E2DEB9;
+p, small {
+	color: $lightYellow;
 	text-align: center;
+}
+
+footer {
+	border-top: 1px solid $strongYellow;
 }
 
 .logo {
@@ -15,10 +23,10 @@ p {
 }
 
 .hero-unit {
-	background-color: #9E4B46;
+	background-color: $strongRed;
 
 	h1 {
 		text-align: center;
-		color: #DDD66F;
+		color: $strongYellow;
 	}
 }
