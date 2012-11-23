@@ -14,6 +14,10 @@ p, small {
 	text-align: center;
 }
 
+.center {
+	text-align: center;
+}
+
 footer {
 	border-top: 1px solid $strongYellow;
 }
@@ -26,6 +30,7 @@ footer {
 	background-color: $strongRed;
 
 	h1 {
+		font-family: 'Butcherman', cursive;
 		text-align: center;
 		color: $strongYellow;
 	}
