@@ -1,0 +1,24 @@
+@import "bootstrap";
+
+body {
+	padding-top: 60px;
+	background-color: #312E3D;
+}
+
+p {
+	color: #E2DEB9;
+	text-align: center;
+}
+
+.logo {
+	font-family: 'Butcherman', cursive;
+}
+
+.hero-unit {
+	background-color: #9E4B46;
+
+	h1 {
+		text-align: center;
+		color: #DDD66F;
+	}
+}
