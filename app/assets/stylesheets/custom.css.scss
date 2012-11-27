@@ -24,6 +24,10 @@ p, small {
 	text-align: center;
 }
 
+.tablerow {
+  background-color: $lightYellow;
+}
+
 footer {
 	border-top: 1px solid $strongYellow;
 }
@@ -70,6 +74,20 @@ input {
   @extend .error;
   text-shadow: 1px 1px #000;
  }
+/* users index */
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    /*border-top: 1px solid $strongYellow;*/
+    &:last-child {
+      /*border-bottom: 1px solid $strongYellow;*/
+    }
+  }
+  @include box_sizing;
+}
 
 /* miscellaneous */
 

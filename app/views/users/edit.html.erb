@@ -1,8 +1,8 @@
-<% provide(title: 'Sign up') %>
+<% provide(:title, "Edit profile") %>
 <div class="hero-unit center">
 	<div class="row-fluid">
 		<div class="span4 offset4">
-		<h1>Sign up</h1>
+		<h1>Update your profile</h1>
 		<%= form_for(@user) do |f| %>
 			<%= render 'shared/error_messages' %>
 			<%= f.label :name %>
@@ -17,7 +17,7 @@
 			<%= f.label :password_confirmation, "Confirmation" %>
 			<%= f.password_field :password_confirmation %>
 
-			<%= f.submit "Create an account", class: "btn btn-large btn-inverse" %>
+			<%= f.submit "Save changes", class: "btn btn-large btn-inverse" %>
 		<% end %>
 		</div>
 	</div>

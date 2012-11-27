@@ -4,11 +4,14 @@ MovieMarathonHelper::Application.routes.draw do
 
   root to: "static_pages#home"
 
-  match '/help', to: 'static_pages#help'
-  match '/signup', to: 'users#new'
+  match 'help', to: 'static_pages#help'
+  match 'movie', to: 'static_pages#movie_show'
+  match 'signup', to: 'users#new'
+  match 'edit', to: 'users#edit'
   match 'signin', to: 'sessions#new'
   match 'signout', to: 'sessions#destroy', via: :delete
-  
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
