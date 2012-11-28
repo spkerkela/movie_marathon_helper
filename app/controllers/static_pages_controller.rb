@@ -10,7 +10,8 @@ class StaticPagesController < ApplicationController
   end
 
   def movie_show
-  	url = URI.encode("http://www.omdbapi.com/?t=cyborg")
+  	movie = params[:movie].downcase
+  	url = URI.encode("http://www.omdbapi.com/?t=#{movie}")
   	@movie = JSON.parse HTTParty.get(url).response.body
   end
 end

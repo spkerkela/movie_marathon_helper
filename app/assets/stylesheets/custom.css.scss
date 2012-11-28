@@ -10,6 +10,10 @@ body {
 	background-color: $violet;
 }
 
+.no_margin *{
+    margin-bottom: 0!important;
+}
+
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
