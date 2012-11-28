@@ -1,0 +1,7 @@
+<h1 class="logo"><%= current_user.name %></h1>
+<span>
+	<%= link_to "View my profile", current_user %>
+</span>
+<em>
+	<%= pluralize(current_user.microposts.count, "post") %>
+</em>

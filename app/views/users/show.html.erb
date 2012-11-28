@@ -8,9 +8,15 @@
 		</section>
 	</div>
 	</aside>
-	<div class="span7">
-		<div class="hero-unit center">
-		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam luctus, mauris sed scelerisque dignissim, turpis eros interdum mi, id dapibus felis magna vitae tellus. Donec dolor nulla, porttitor vitae ullamcorper a, egestas ut arcu. Duis pulvinar auctor tincidunt. Pellentesque tempus arcu odio. Maecenas varius est nec ante dapibus varius. Nam varius interdum nibh, vel tempus tellus vulputate sit amet. Morbi ac neque quis orci accumsan lobortis tincidunt non turpis. Pellentesque ac pellentesque orci. Vestibulum pretium nisl a velit volutpat tempor. Suspendisse potenti. Ut ipsum sapien, dignissim eget aliquam eu, luctus nec enim. Sed nulla nibh, bibendum at fringilla quis, egestas quis eros. Quisque convallis tellus sit amet lacus gravida eget placerat mi dictum.</p>
+	<div class="span8">
+		<div class="hero-unit">
+			<% if @user.microposts.any? %>
+			<h3>Posts in total: <%= @user.microposts.count %></h3>
+			<ol class="microposts">
+				<%= render @microposts %>
+			</ol>
+			<%= will_paginate @microposts, class: "pagination pagination-centered pagination-small" %>
+			<% end %>
 		</div>
 	</div>
 </div>

@@ -5,6 +5,25 @@ $lightYellow: #E2DEB9;
 $strongYellow: #DDD66F;
 $strongRed: #9E4B46;
 $violet: #55233E;
+
+h1, h2, h3, h4, h5, h6 {
+  color: $strongYellow;
+  text-shadow: 2px 2px #000;
+}
+
+a {
+  color: cyan;
+}
+.pagination{
+  a{
+    color: black;
+  }
+}
+
+em {
+  color: $lightYellow;
+}
+
 body {
 	padding-top: 60px;
 	background-color: $violet;
@@ -47,7 +66,6 @@ footer {
 		font-family: 'Butcherman', cursive;
 		text-align: center;
     margin-bottom: 10px;
-		text-shadow: 2px 2px #000;
 		color: $strongYellow;
 	}
 }
@@ -92,6 +110,35 @@ input {
     }
   }
   @include box_sizing;
+}
+
+/* microposts */
+
+.microposts {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  color: $lightYellow;
+  display: block;
+}
+.timestamp {
+  color: $violet;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
 }
 
 /* miscellaneous */

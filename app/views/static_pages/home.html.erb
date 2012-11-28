@@ -1,5 +1,24 @@
+<% if signed_in? %>
+<div class="row-fluid">
+	<aside class="span4">
+		<section>
+			<%= render 'shared/user_info' %>
+		</section>
+		<section>
+			<%= render 'shared/micropost_form' %>
+		</section>
+	</aside>
+	<div class="span8">
+		<div class="hero-unit">
+			<h3>Activity feed</h3>
+			<%= render 'shared/feed' %>
+		</div>
+	</div>
+</div>
+<% else %>
 <div class="center hero-unit">
 <h1 class="logo">Movie Marathon Helper</h1>
 <p>Welcome to Movie Marathon Helper, come here to make managing your movie marathons a breeze!</p>
 <%= link_to "Sign up now!", signup_path, class: "btn btn-large btn-inverse" %>
 </div>
+<% end %>
