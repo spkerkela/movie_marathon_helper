@@ -1,13 +1,13 @@
 <% provide(:title, @user.name) %>
 
-<div class="row">
-	<aside class="span5">
+<div class="row-fluid">
+	<div class="span4">
 	<div class="hero-unit center">
 		<section>
 			<h1><%= @user.name %></h1>
 		</section>
 	</div>
-	</aside>
+	</div>
 	<div class="span8">
 		<div class="hero-unit">
 			<% if @user.microposts.any? %>
