@@ -5,10 +5,12 @@
 	<div class="hero-unit center">
 		<section>
 			<h1><%= @user.name %></h1>
+			<%= render 'shared/stats' %>
 		</section>
 	</div>
 	</div>
 	<div class="span8">
+		<%= render 'follow_form' if signed_in? %>
 		<div class="hero-unit">
 			<% if @user.microposts.any? %>
 			<h3>Posts in total: <%= @user.microposts.count %></h3>
@@ -16,6 +18,8 @@
 				<%= render @microposts %>
 			</ol>
 			<%= will_paginate @microposts, class: "pagination pagination-centered pagination-small" %>
+			<% else %>
+				<h2>User has no posts yet!</h2>
 			<% end %>
 		</div>
 	</div>

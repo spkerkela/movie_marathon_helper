@@ -6,6 +6,27 @@ $strongYellow: #DDD66F;
 $strongRed: #9E4B46;
 $violet: #55233E;
 
+/* sidebar */
+
+.stats {
+  overflow: auto;
+  a {
+    /*float: left;*/
+    padding: 0 10px;
+    border-left: 1px solid $lightYellow;
+    color: $strongYellow;
+    text-shadow: 2px 2px #000;
+    &:first-child {
+      padding-left: 0;
+      border: 0;
+    }
+    &:hover {
+      text-decoration: none;
+      color: $orange;
+    }
+  }
+}
+
 h1, h2, h3, h4, h5, h6 {
   color: $strongYellow;
   text-shadow: 2px 2px #000;
