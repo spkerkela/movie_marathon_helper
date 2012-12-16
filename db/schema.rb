@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121216163008) do
+ActiveRecord::Schema.define(:version => 20121216191858) do
 
   create_table "microposts", :force => true do |t|
     t.string   "content"
@@ -32,13 +32,13 @@ ActiveRecord::Schema.define(:version => 20121216163008) do
     t.string   "director"
     t.string   "writer"
     t.string   "actors"
-    t.string   "plot"
+    t.text     "plot",       :limit => 255
     t.string   "poster"
     t.float    "imdbrating"
     t.integer  "imdbvotes"
     t.string   "imdbid"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
+    t.datetime "created_at",                :null => false
+    t.datetime "updated_at",                :null => false
   end
 
   add_index "movies", ["title", "year"], :name => "index_movies_on_title_and_year", :unique => true
