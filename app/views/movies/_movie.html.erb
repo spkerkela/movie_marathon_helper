@@ -1,0 +1,11 @@
+<li class="span2">
+	<div class ="thumbnail">
+		<%= link_to image_tag(movie.poster, size: "210x320"), movie %>
+		<h5 class="center"><%= movie.title %></h3>
+		<p><%= movie.plot[0..100] %>...</p>
+		<% if current_user.admin? %>
+			<%= link_to "delete", movie, class: "btn btn-danger", method: :delete, data: { confirm: "Are you sure you want to delete #{ movie.title}?"} %>
+		<% end %>
+	</div>
+<!--<%= link_to image_tag( movie.poster ) , movie, class: "thumbnail" %> -->
+</li>

@@ -1,0 +1,6 @@
+<% provide :title, 'Movies'  %>
+<% if !@movies.empty? %>
+<%= will_paginate %>
+<ul class="thumbnails"><%= render @movies %></ul>
+<%= will_paginate %>
+<% end %>

@@ -27,13 +27,17 @@ $violet: #55233E;
   }
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6,dt {
   color: $strongYellow;
   text-shadow: 2px 2px #000;
 }
 
 a {
-  color: cyan;
+  color: orange;
+  &:hover{
+    text-decoration: none;
+    color: red;
+  }
 }
 .pagination{
   a{
@@ -54,6 +58,14 @@ body {
     margin-bottom: 0!important;
 }
 
+.info-box {
+
+  background-color: $violet;
+  border-color: black;
+  border-width: 1px;
+  border-radius: 5px;
+}
+
 @mixin box_sizing {
   -moz-box-sizing: border-box; 
   -webkit-box-sizing: border-box; 
@@ -62,6 +74,9 @@ body {
 p, small {
 	color: $lightYellow;
 	text-align: center;
+}
+dd {
+  color: $lightYellow;
 }
 
 .center {
@@ -148,6 +163,11 @@ input {
   color: $lightYellow;
   display: block;
 }
+
+.thumbnail {
+  background-color: $strongRed;
+}
+
 .timestamp {
   color: $violet;
 }

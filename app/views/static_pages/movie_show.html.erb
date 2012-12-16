@@ -1,21 +1,49 @@
-<% provide(:title, "Test page") %>
+<% provide(:title, @movie["Title"]) %>
 <div class="hero-unit center">
 	<% if @movie["Response"] == "True" %>
 	<div class="row-fluid">
 		<div class="span4">
-			<img src="<%= @movie['Poster'] %>">
+			<img src="<%= @movie['Poster'] %>" class="img-polaroid">
 		</div>
-		<div class="span4">
+		<div class="span6">
 			<h1><%= @movie["Title"] %></h1>
 			<p><%= @movie["Plot"] %></p>
+			<!--<%= link_to "Add to movies", movies_new_path( movie: @movie["Title"]), class: "btn btn-primary" %> -->
+			<%= render 'movies/movie_form' %>
+			
 		</div>
-		<div class="span4">
-			<% @movie.each_key do |key| %>
-				<% if key != "Poster" && key != "Response" && key != "imdbID" && key != "Plot"%>
-					<h3><%= key %></h3>
-					<small><%=  @movie[key] %></small>
+
+		<div class="span2 info-box">
+			<h3>Movie Info</h3>
+			<dl>
+				<dt>Title</dt>
+				<dd><%= @movie["Title"] %></dd>
+
+				<dt>Release date</dt>
+				<dd><%= @movie["Released"] %></dd>
+
+				<dt>Runtime</dt>
+				<dd><%= @movie["Runtime"] %></dd>
+
+				<dt>Director</dt>
+				<dd><%= @movie["Director"]%></dd>
+
+				<dt>Writer</dt>
+				<dd><%= @movie["Writer"] %></dd>
+		
+				<dt>Actors</dt>
+				<% for actor in @actors do %>
+				<dd><%= actor %></dd>
 				<% end %>
-			<% end %>
+
+				<dt>Genres</dt>
+				<% for genre in @genres do %>
+				<dd><%= genre %></dd>
+				<% end %>
+
+				<dt>IMDB rating</dt>
+				<dd><%= @movie["imdbRating"] %></dd>
+			</dl>
 		</div>
 	</div>
 	<% else %>
