@@ -17,10 +17,17 @@ class StaticPagesController < ApplicationController
     @mv = Movie.new
   	moviename = params[:movie].downcase
   	url = URI.encode("http://www.omdbapi.com/?t=#{moviename}&plot=full")
+    url_w_id = URI.encode("http://www.omdbapi.com/?i=#{moviename}&plot=full")
   	@movie = JSON.parse HTTParty.get(url).response.body
     if @movie["Response"] == "True"
       @actors = @movie["Actors"].split(/, */)
-      @genres = @movie["Genre"].split(/, */)  
+      @genres = @movie["Genre"].split(/, */)
+    else
+      @movie = JSON.parse HTTParty.get(url_w_id).response.body
+      if @movie["Response"] == "True"
+        @actors = @movie["Actors"].split(/, */)
+        @genres = @movie["Genre"].split(/, */)
+      end
     end
   end
 end

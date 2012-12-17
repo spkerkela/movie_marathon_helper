@@ -11,7 +11,7 @@
                 <li><%= link_to "Movies", movies_path%></li>
                 <div class="navbar-form pull-left no_margin">
                 <%= form_tag controller: "static_pages", action: "movie_show" do %>
-                  <%= text_field_tag :movie, nil, class: "span2" %>
+                  <%= text_field_tag :movie,nil ,placeholder: 'Movie title or imdbID', class: "span3" %>
                   <%= submit_tag("Search movie", class: "btn btn-inverse") %>
                 <% end %>
                 </div>
