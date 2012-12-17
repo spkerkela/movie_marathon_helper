@@ -27,6 +27,11 @@ $violet: #55233E;
   }
 }
 
+.thumbnail{
+  display: block;
+  max-height: 240px;
+}
+
 h1, h2, h3, h4, h5, h6,dt {
   color: $strongYellow;
   text-shadow: 2px 2px #000;
@@ -164,8 +169,9 @@ input {
   display: block;
 }
 
-.thumbnail {
-  background-color: $strongRed;
+.thumbnail{
+  border-style: none;
+  height: 240px;
 }
 
 .timestamp {
