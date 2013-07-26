@@ -42,6 +42,7 @@ ActiveRecord::Schema.define(:version => 20121216191858) do
   end
 
   add_index "movies", ["title", "year"], :name => "index_movies_on_title_and_year", :unique => true
+  add_index "movies", ["title"], :name => "index_movies_on_title"
 
   create_table "relationships", :force => true do |t|
     t.integer  "follower_id"
